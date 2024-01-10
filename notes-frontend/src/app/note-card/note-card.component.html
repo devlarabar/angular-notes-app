@@ -1,0 +1,11 @@
+<mat-card #container class="note-card-container">
+    <mat-card-content [routerLink]="link">
+        <h2 class="note-card-title">{{ title }}</h2>
+        <div #bodyText>
+            <p>{{ body}}</p>
+            <div #truncator class="fade-out-truncation"></div>
+        </div>
+    </mat-card-content>
+    <div class="x-button" (click)="onXButtonClick()">
+    </div>
+</mat-card>

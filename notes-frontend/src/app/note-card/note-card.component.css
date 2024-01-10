@@ -1,0 +1,61 @@
+.note-card-container:hover {
+    cursor: pointer;
+}
+
+.note-card-container:hover .x-button {
+    transition-delay: 0.35s;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.note-card-content {
+    padding: 25px;
+}
+
+.note-card-body {
+    position: relative;
+    max-height: 80px;
+    overflow: hidden;
+    color: #555555;
+}
+
+.note-card-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #a59ad7;
+}
+
+.fade-out-truncation {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 1) 100%);
+    pointer-events: none;
+}
+
+.x-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    height: 34px;
+    width: 34px;
+    background-color: rgb(255, 227, 227);
+    border-radius: 4px;
+    background-image: url("../../assets/delete-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: red;
+    opacity: 0;
+    transform: scale(0.35);
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.x-button:hover {
+    background-color: rgb(255, 215, 215);
+}
+
+.x-button:active {
+    background-color: rgb(255, 207, 207);
+}

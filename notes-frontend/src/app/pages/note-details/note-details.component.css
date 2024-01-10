@@ -1,0 +1,43 @@
+.form-container {
+    max-width: 500px;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.note-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.note-form .inputs {
+    align-self: flex-end;
+    text-align: right;
+    display: flex;
+    gap: 10px;
+}
+
+.note-form label {
+    font-weight: bold;
+    color: #555555;
+}
+
+.submit-btn,
+.cancel-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background: rgb(166, 230, 166);
+    transition: 0.2s ease-out;
+}
+
+.submit-btn:disabled {
+    background-color: rgb(229, 235, 229);
+}
+
+.cancel-btn {
+    text-decoration: underline;
+    color: #555555;
+}

@@ -1,0 +1,15 @@
+<div class="main-container">
+    <div class="search-bar-container">
+        <mat-form-field>
+            <input #filterInput matInput type="text" class="border-2 rounded-sm" placeholder="Filter"
+                (keyup)="filterNotes($any($event.target).value)" />
+        </mat-form-field>
+    </div>
+    <section class="notes-list">
+        @for (note of filteredNotes; track note) {
+        <app-note-card [title]="note.title" [body]="note.body" [link]="generateNoteUrl(note)"
+            (delete)="deleteNote(note)"></app-note-card>
+        }
+    </section>
+    <button class="add-button" routerLink="new">+</button>
+</div>

@@ -1,0 +1,16 @@
+<div class="form-container">
+    <form #noteForm="ngForm" (ngSubmit)="onSubmit(noteForm)" class="note-form">
+        <mat-form-field>
+            <mat-label for="title">Title</mat-label>
+            <input type="text" matInput [ngModel]="note.title" name="title" id="title" required />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label for="body">Body</mat-label>
+            <textarea matInput [ngModel]="note.body" id="body" name="body" rows="10"></textarea>
+        </mat-form-field>
+        <div class="inputs">
+            <button type="button" mat-stroked-button color="primary" (click)="onCancel()">Cancel</button>
+            <button type="submit" mat-flat-button color="primary" [disabled]="!noteForm.valid">Save</button>
+        </div>
+    </form>
+</div>
